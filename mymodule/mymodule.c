@@ -5,7 +5,7 @@
 
 extern int enabled;
 //extern int jw_0, jw_1;
-extern unsigned long long a_t[NUMCORE], a_c[NUMCORE];
+/*extern unsigned long long a_t[NUMCORE], a_c[NUMCORE];
 extern unsigned long long b_t[NUMCORE], b_c[NUMCORE];
 extern unsigned long long c_t[NUMCORE], c_c[NUMCORE];
 extern unsigned long long d_t[NUMCORE], d_c[NUMCORE];
@@ -16,7 +16,7 @@ extern unsigned long long h_t[NUMCORE], h_c[NUMCORE];
 extern unsigned long long i_t[NUMCORE], i_c[NUMCORE];
 extern unsigned long long j_t[NUMCORE], j_c[NUMCORE];
 extern unsigned long long k_t[NUMCORE], k_c[NUMCORE];
-extern unsigned long long l_t[NUMCORE], l_c[NUMCORE];
+extern unsigned long long l_t[NUMCORE], l_c[NUMCORE]; */
 extern unsigned long long m_t[NUMCORE], m_c[NUMCORE];
 extern unsigned long long n_t[NUMCORE], n_c[NUMCORE];
 extern unsigned long long o_t[NUMCORE], o_c[NUMCORE];
@@ -52,7 +52,7 @@ static void __exit exit_mymodule(void)
 	enabled = 0;
 //  jw_0 = 0;
 //  jw_1 = 0;
-	unsigned long long a_time = 0, a_count = 0;
+/*	unsigned long long a_time = 0, a_count = 0;
 	unsigned long long b_time = 0, b_count = 0;
 	unsigned long long c_time = 0, c_count = 0;
 	unsigned long long d_time = 0, d_count = 0;
@@ -63,7 +63,7 @@ static void __exit exit_mymodule(void)
 	unsigned long long i_time = 0, i_count = 0;
 	unsigned long long j_time = 0, j_count = 0;
 	unsigned long long k_time = 0, k_count = 0;
-	unsigned long long l_time = 0, l_count = 0;
+	unsigned long long l_time = 0, l_count = 0; */
 	unsigned long long m_time = 0, m_count = 0;
 	unsigned long long n_time = 0, n_count = 0;
 	unsigned long long o_time = 0, o_count = 0;
@@ -113,12 +113,7 @@ static void __exit exit_mymodule(void)
 //	printk("j_time : %llu, j_count : %llu\n", j_time, j_count);
 //	printk("k_time : %llu, k_count : %llu\n", k_time, k_count);
 //	printk("l_time : %llu, l_count : %llu\n", l_time, l_count);
-	printk("add_pagevec:%llu\n",m_time);
-  printk("m_count:%llu\n",m_count);
-	printk("__vfs_write:%llu\n",n_time);
-  printk("n_count:%llu\n",n_count);
-	printk("pagecache_get:%llu\n",o_time);
-  printk("o_count:%llu\n",o_count);
+	printk("add_pagevec:%llu %llu %llu %llu %llu %llu \n",m_time, m_count, n_time, n_count, o_time, o_count);
 	
 	return 0;
 }
